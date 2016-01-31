@@ -1,5 +1,5 @@
 {
-  "name": "off-thread-image",
+  "name": "offthread-image",
   "version": "0.1.0",
   "description": "An Off-Thread Image decoding library",
   "main": "index.js",

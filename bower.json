@@ -1,0 +1,21 @@
+{
+  "name": "offthread-image",
+  "description": "An Off-Thread Image decoding library",
+  "main": "index.js",
+  "authors": [
+    "Paul Lewis [Google]"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/robdodson/offthread-image",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.2.4"
+  }
+}

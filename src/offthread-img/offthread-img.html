@@ -1,0 +1,53 @@
+<link rel="import" href="../../polymer/polymer.html">
+
+<!-- Might want to bring this in with an import which contains this script -->
+<script src="offthread-img.js"></script>
+
+<dom-module id="offthread-img">
+  <template>
+
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+  </template>
+  <script>
+    Polymer({
+
+      is: 'offthread-img',
+
+      properties: {
+        src: {
+          type: String,
+          reflectToAttribute: true
+        },
+        bgSrc: {
+          type: String,
+          reflectToAttribute: true
+        },
+        width: {
+          type: Number,
+          reflectToAttribute: true
+        },
+        height: {
+          type: Number,
+          reflectToAttribute: true
+        },
+        alt: {
+          type: String,
+          reflectToAttribute: true
+        }
+      },
+
+      attached: function() {
+        var img = new OffthreadImage(this);
+        this.addEventListener('decoded', function() {
+          this.classList.remove('spinner');
+        }.bind(this));
+      }
+
+    });
+  </script>
+</dom-module>
